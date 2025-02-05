@@ -124,7 +124,7 @@ argument-naming-style=snake_case
 # Regular expression matching correct argument names. Overrides argument-
 # naming-style. If left empty, argument names will be checked with the set
 # naming style.
-#argument-rgx=
+argument-rgx=^[a-z][a-z0-9_]*$
 
 # Naming style matching correct attribute names.
 attr-naming-style=snake_case
@@ -167,7 +167,7 @@ class-naming-style=PascalCase
 
 # Regular expression matching correct class names. Overrides class-naming-
 # style. If left empty, class names will be checked with the set naming style.
-#class-rgx=
+class-rgx=^[A-Z][a-z]+(?:[A-Z][a-z]+)*$
 
 # Naming style matching correct constant names.
 const-naming-style=UPPER_CASE
@@ -187,7 +187,7 @@ function-naming-style=snake_case
 # Regular expression matching correct function names. Overrides function-
 # naming-style. If left empty, function names will be checked with the set
 # naming style.
-#function-rgx=
+function-rgx=^[a-z][a-z0-9_]*$
 
 # Good variable names which should always be accepted, separated by a comma.
 good-names=i,
@@ -217,7 +217,7 @@ method-naming-style=snake_case
 
 # Regular expression matching correct method names. Overrides method-naming-
 # style. If left empty, method names will be checked with the set naming style.
-#method-rgx=
+method-rgx=^[a-z][a-z0-9_]*$
 
 # Naming style matching correct module names.
 module-naming-style=snake_case
@@ -253,7 +253,7 @@ variable-naming-style=snake_case
 # Regular expression matching correct variable names. Overrides variable-
 # naming-style. If left empty, variable names will be checked with the set
 # naming style.
-#variable-rgx=
+variable-rgx=^[a-z][a-z0-9_]*$
 
 
 [CLASSES]
