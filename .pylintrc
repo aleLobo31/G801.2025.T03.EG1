@@ -175,11 +175,11 @@ const-naming-style=UPPER_CASE
 # Regular expression matching correct constant names. Overrides const-naming-
 # style. If left empty, constant names will be checked with the set naming
 # style.
-#const-rgx=
+#const-rgx=^[A-Z][A-Z0-9_]+$
 
 # Minimum line length for functions/classes that require docstrings, shorter
 # ones are exempt.
-docstring-min-length=-1
+docstring-min-length=10
 
 # Naming style matching correct function names.
 function-naming-style=snake_case
@@ -290,7 +290,7 @@ exclude-too-few-public-methods=
 ignored-parents=
 
 # Maximum number of arguments for function / method.
-max-args=5
+max-args=6
 
 # Maximum number of attributes for a class (see R0902).
 max-attributes=7
@@ -332,7 +332,7 @@ overgeneral-exceptions=builtins.BaseException,builtins.Exception
 [FORMAT]
 
 # Expected format of line ending, e.g. empty (any line ending), LF or CRLF.
-expected-line-ending-format=
+expected-line-ending-format=LF
 
 # Regexp for a line that is allowed to be longer than the limit.
 ignore-long-lines=^\s*(# )?<?https?://\S+>?$
@@ -345,7 +345,7 @@ indent-after-paren=4
 indent-string='    '
 
 # Maximum number of characters on a single line.
-max-line-length=100
+max-line-length=120
 
 # Maximum number of lines in a module.
 max-module-lines=1000
@@ -356,7 +356,7 @@ single-line-class-stmt=no
 
 # Allow the body of an if to be on the same line as the test if there is no
 # else.
-single-line-if-stmt=no
+single-line-if-stmt=yes
 
 
 [IMPORTS]
@@ -402,7 +402,7 @@ preferred-modules=
 
 # The type of string formatting that logging methods do. `old` means using %
 # formatting, `new` is for `{}` formatting.
-logging-format-style=old
+logging-format-style=new
 
 # Logging modules to check that the string format arguments are in logging
 # function parameter format.
@@ -438,13 +438,15 @@ disable=raw-checker-failed,
         deprecated-pragma,
         use-implicit-booleaness-not-comparison-to-string,
         use-implicit-booleaness-not-comparison-to-zero,
-        use-symbolic-message-instead
+        use-symbolic-message-instead,
+        unused-import,
+        bare-except
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
 # multiple time (only on the command line, not in the configuration file where
 # it should appear only once). See also the "--disable" option for examples.
-enable=
+enable=useless-return
 
 
 [METHOD_ARGS]
@@ -468,7 +470,7 @@ notes-rgx=
 [REFACTORING]
 
 # Maximum number of nested blocks for function / method body
-max-nested-blocks=5
+max-nested-blocks=4
 
 # Complete name of functions that never returns. When checking for
 # inconsistent-return-statements if a never returning function is called then
