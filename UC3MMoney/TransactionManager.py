@@ -6,10 +6,23 @@ class TransactionManager:
     def __init__(self):
         pass
 
-    def ValidateIBAN( self, IbAn ):
-        # PLEASE INCLUDE HERE THE CODE FOR VALIDATING THE GUID
-        # RETURN TRUE IF THE GUID IS RIGHT, OR FALSE IN OTHER CASE
-        return True
+    def validate_iban(self, iban : str) -> bool:
+        """A method that checks if an iban is correct or not"""
+
+        if len(iban) != 24 or iban[:2] != 'ES' or not iban[2:].isdigit(): return False
+
+        iban = iban[4:] + iban[:4]
+        numeric_iban = ''
+
+        for char in iban:
+            if not char.isalpha():
+                numeric_iban += char
+            else:
+                numeric_iban += (str(ord(char) - 55))
+
+        if int(numeric_iban) % 97 == 1:
+            return True
+        return False
 
     def ReadproductcodefromJSON( self, fi ):
 
@@ -29,9 +42,9 @@ class TransactionManager:
             req = TransactionRequest(T_FROM, T_TO,TO_NAME)
         except KeyError as e:
             raise TransactionManagementException("JSON Decode Error - Invalid JSON Key") from e
-        if not self.ValidateIBAN(T_FROM) :
+        if not self.validate_iban(T_FROM) :
             raise TransactionManagementException("Invalid FROM IBAN")
         else:
-            if not self.ValidateIBAN(T_TO):
+            if not self.validate_iban(T_TO):
                 raise TransactionManagementException("Invalid TO IBAN")
         return req
