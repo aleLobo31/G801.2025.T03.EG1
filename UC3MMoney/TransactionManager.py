@@ -8,7 +8,6 @@ class TransactionManager:
 
     def validate_iban(self, iban : str) -> bool:
         """A method that checks if an iban is correct or not"""
-
         if len(iban) != 24 or iban[:2] != 'ES' or not iban[2:].isdigit(): return False
 
         iban = iban[4:] + iban[:4]

@@ -5,8 +5,15 @@ import string
 letters = string.ascii_letters + string.punctuation + string.digits
 shift = 3
 
+def ejemplo_funcion(a):
+    if(a > 3):
+        if(a > 6):
+            if(a > 9):
+                if(a > 12):
+                    if(a > 15):
+                        print(a)
 
-def Encode(word):
+def Encode(word) -> str:
     encoded = ""
     for letter in word:
         if letter == ' ':

@@ -3,7 +3,7 @@ from datetime import datetime
 
 
 class TransactionRequest:
-    def __init__(self, IbAnFROM,iBaNtO, RECIpiEntName):
+    def __init__(self, IbAnFROM,iBaNtO, RECIpiEntName) -> None:
         self.__recipient = RECIpiEntName
         self.__IBANFrOm = IbAnFROM
         self.__IBANtO = iBaNtO
