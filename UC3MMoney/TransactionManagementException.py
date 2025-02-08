@@ -1,4 +1,6 @@
+""" Import required modules"""
 class TransactionManagementException(Exception):
+    """Class that defines exceptions for transactions"""
     def __init__(self, message):
         self.__message = message
         super().__init__(self.message)

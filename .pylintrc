@@ -217,14 +217,14 @@ method-naming-style=snake_case
 
 # Regular expression matching correct method names. Overrides method-naming-
 # style. If left empty, method names will be checked with the set naming style.
-method-rgx=^[a-z][a-z0-9_]*$
+method-rgx=^(__init__|__str__|[a-z_][a-z0-9_]{2,30})$
 
 # Naming style matching correct module names.
-module-naming-style=snake_case
+module-naming-style=PascalCase
 
 # Regular expression matching correct module names. Overrides module-naming-
 # style. If left empty, module names will be checked with the set naming style.
-#module-rgx=
+module-rgx=.*
 
 # Colon-delimited sets of names that determine each other's naming style when
 # the name regexes allow several styles.
