@@ -2,7 +2,7 @@ import json
 from .TransactionManagementException import TransactionManagementException
 from .TransactionRequest import TransactionRequest
 
-class TransactionManager:
+class transactionManager:
     def __init__(self):
         pass
 
