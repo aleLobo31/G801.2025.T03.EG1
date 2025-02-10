@@ -124,6 +124,10 @@ argument-naming-style=snake_case
 # Regular expression matching correct argument names. Overrides argument-
 # naming-style. If left empty, argument names will be checked with the set
 # naming style.
+# REGLA MODIFICADA
+
+# argument-rgx=
+
 argument-rgx=^[a-z][a-z0-9_]*$
 
 # Naming style matching correct attribute names.
@@ -167,6 +171,10 @@ class-naming-style=PascalCase
 
 # Regular expression matching correct class names. Overrides class-naming-
 # style. If left empty, class names will be checked with the set naming style.
+# REGLA MODIFICADA
+
+# class-rgx=
+
 class-rgx=^[A-Z][a-z]+(?:[A-Z][a-z]+)*$
 
 # Naming style matching correct constant names.
@@ -175,10 +183,18 @@ const-naming-style=UPPER_CASE
 # Regular expression matching correct constant names. Overrides const-naming-
 # style. If left empty, constant names will be checked with the set naming
 # style.
-#const-rgx=^[A-Z][A-Z0-9_]+$
+# REGLA MODIFICADA
+
+# const-rgx=
+
+const-rgx=^[A-Z][A-Z0-9_]+$
 
 # Minimum line length for functions/classes that require docstrings, shorter
 # ones are exempt.
+# REGLA MODIFICADA
+
+# docstring-min-length=-1
+
 docstring-min-length=10
 
 # Naming style matching correct function names.
@@ -187,6 +203,10 @@ function-naming-style=snake_case
 # Regular expression matching correct function names. Overrides function-
 # naming-style. If left empty, function names will be checked with the set
 # naming style.
+# REGLA MODIFICADA
+
+# function-rgx=
+
 function-rgx=^[a-z][a-z0-9_]*$
 
 # Good variable names which should always be accepted, separated by a comma.
@@ -217,6 +237,10 @@ method-naming-style=snake_case
 
 # Regular expression matching correct method names. Overrides method-naming-
 # style. If left empty, method names will be checked with the set naming style.
+# REGLA MODIFICADA
+
+# method-rgx=
+
 method-rgx=^(__init__|__str__|[a-z_][a-z0-9_]{2,30})$
 
 # Naming style matching correct module names.
@@ -253,6 +277,10 @@ variable-naming-style=snake_case
 # Regular expression matching correct variable names. Overrides variable-
 # naming-style. If left empty, variable names will be checked with the set
 # naming style.
+# REGLA MODIFICADA
+
+# variable-rgx=
+
 variable-rgx=^[a-z][a-z0-9_]*$
 
 
@@ -290,6 +318,10 @@ exclude-too-few-public-methods=
 ignored-parents=
 
 # Maximum number of arguments for function / method.
+# REGLA MODIFICADA
+
+# max-args=5
+
 max-args=6
 
 # Maximum number of attributes for a class (see R0902).
@@ -299,6 +331,10 @@ max-attributes=7
 max-bool-expr=5
 
 # Maximum number of branch for function / method body.
+# REGLA MODIFICADA
+
+# max-branches=12
+
 max-branches=8
 
 # Maximum number of locals for function / method body.
@@ -345,6 +381,10 @@ indent-after-paren=4
 indent-string='    '
 
 # Maximum number of characters on a single line.
+# REGLA MODIFICADA
+
+# max-line-length=100
+
 max-line-length=120
 
 # Maximum number of lines in a module.
@@ -356,6 +396,10 @@ single-line-class-stmt=no
 
 # Allow the body of an if to be on the same line as the test if there is no
 # else.
+# REGLA MODIFICADA
+
+# single-line-if-stmt=no
+
 single-line-if-stmt=yes
 
 
@@ -402,6 +446,10 @@ preferred-modules=
 
 # The type of string formatting that logging methods do. `old` means using %
 # formatting, `new` is for `{}` formatting.
+# REGLA MODIFICADA
+
+# logging-format-style=old
+
 logging-format-style=new
 
 # Logging modules to check that the string format arguments are in logging
@@ -429,6 +477,19 @@ confidence=HIGH,
 # --enable=similarities". If you want to run only the classes checker, but have
 # no Warning level messages displayed, use "--disable=all --enable=classes
 # --disable=W".
+# REGLA MODIFICADA
+
+# disable=raw-checker-failed,
+#        bad-inline-option,
+#        locally-disabled,
+#        file-ignored,
+#        suppressed-message,
+#        useless-suppression,
+#        deprecated-pragma,
+#        use-implicit-booleaness-not-comparison-to-string,
+#        use-implicit-booleaness-not-comparison-to-zero,
+#        use-symbolic-message-instead,
+
 disable=raw-checker-failed,
         bad-inline-option,
         locally-disabled,
@@ -439,13 +500,16 @@ disable=raw-checker-failed,
         use-implicit-booleaness-not-comparison-to-string,
         use-implicit-booleaness-not-comparison-to-zero,
         use-symbolic-message-instead,
-        unused-import,
         bare-except
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
 # multiple time (only on the command line, not in the configuration file where
 # it should appear only once). See also the "--disable" option for examples.
+# REGLA MODIFICADA
+
+# enable=
+
 enable=useless-return
 
 
@@ -470,6 +534,10 @@ notes-rgx=
 [REFACTORING]
 
 # Maximum number of nested blocks for function / method body
+# REGLA MODIFICADA
+
+# max-nested-blocks=5
+
 max-nested-blocks=4
 
 # Complete name of functions that never returns. When checking for
